@@ -5,19 +5,19 @@ pipeline {
 
          stage('compile') {
                      steps {
-                         sh 'mvn -DskipTests clean compile'
+                         sh 'mvnw -DskipTests clean compile'
                      }
                  }
          stage('unit test') {
                      steps {
-                         sh 'mvn clean test'
+                         sh 'mvnw clean test'
                      }
                  }
 
 
                  stage('build') {
                              steps {
-                                 sh 'mvn -DskipTests clean package'
+                                 sh 'mvnw -DskipTests clean package'
                              }
                          }
      }
