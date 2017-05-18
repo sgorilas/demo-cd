@@ -29,10 +29,17 @@ pipeline {
                           }
 
                           stage('quality') {
-                                steps {
-                                    sh './mvnw checkstyle:checkstyle'
-                                }
-                            }
+                                 steps {
+                                     sh './mvnw checkstyle:checkstyle'
+                                 }
+                             }
+
+
+                             stage('build docker') {
+                                         steps {
+                                             sh 'docker build -f DockerFile .'
+                                         }
+                                     }
      }
 
  }
