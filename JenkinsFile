@@ -38,7 +38,7 @@ pipeline {
                              stage('build docker') {
                                          steps {
                                          sh 'ls -al'
-                                             sh 'docker build -f DockerFile .'
+                                             sh 'docker build -f DockerFile . --name stelios'
                                          }
                                      }
      }
