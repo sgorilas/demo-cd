@@ -28,7 +28,7 @@ pipeline {
                               }
                           }
 
-                          stage('coverage') {
+                          stage('quality') {
                                 steps {
                                     sh './mvnw checkstyle:checkstyle'
                                 }
