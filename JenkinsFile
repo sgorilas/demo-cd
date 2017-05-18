@@ -1,0 +1,29 @@
+pipeline {
+     agent any
+     stages {
+         stage('compile') {
+             steps {
+                 echo 'Hello World'
+             }
+         }
+
+         stage('compile') {
+                     steps {
+                         sh 'mvn -DskipTests clean compile'
+                     }
+                 }
+         stage('unit test') {
+                     steps {
+                         sh 'mvn clean test'
+                     }
+                 }
+
+
+                 stage('build') {
+                             steps {
+                                 sh 'mvn -DskipTests clean package'
+                             }
+                         }
+     }
+
+ }
