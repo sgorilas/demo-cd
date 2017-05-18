@@ -65,9 +65,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.16</version>
                 <configuration>
-                    <forkCount>5</forkCount>
-                    <reuseForks>true</reuseForks>
-                    <argLine>-Dnet.sf.ehcache.disabled=true</argLine>
+                    <argLine>${argLine}</argLine>
                 </configuration>
             </plugin>
         </plugins>
