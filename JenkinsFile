@@ -21,6 +21,12 @@ pipeline {
                                  sh './mvnw -DskipTests package'
                              }
                          }
+
+                          stage('coverage') {
+                                                      steps {
+                                                          sh './mvnw jacoco:report'
+                                                      }
+                                                  }
      }
 
  }
