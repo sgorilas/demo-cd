@@ -5,7 +5,7 @@ pipeline {
 
          stage('compile') {
                      steps {
-                         sh 'mvnw -DskipTests clean compile'
+                         sh 'mvnw clean compile'
                      }
                  }
          stage('unit test') {
